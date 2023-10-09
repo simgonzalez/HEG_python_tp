@@ -9,7 +9,7 @@ class Camion():
         else:
             print(f"The left weight is {self.charge_restante}")
 
-    def get_charge_restante(self):
+    def get_charge_restante(self) -> float:
         return self.charge_restante
 
 
