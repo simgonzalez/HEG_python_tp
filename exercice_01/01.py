@@ -16,8 +16,8 @@ class Camion():
 camion1: Camion = Camion()
 print(camion1.get_charge_restante())
 
-camion1.add_chargement(150*5)
+camion1.add_chargement(150 * 5)
 print(camion1.get_charge_restante())
 
-camion1.add_chargement(29*12.5)
+camion1.add_chargement(29 * 12.5)
 print(camion1.get_charge_restante())
