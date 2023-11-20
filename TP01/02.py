@@ -6,7 +6,6 @@ DRINKS_MAPPING: dict = {
     "Ice Tea": 2.2,
     "Limonade": 1.9
 }
-
 print("Bienvenue ! Voici notre sélection de produit :")
 print("----------------------------------------------")
 for idx, drink in enumerate(DRINKS_MAPPING.keys()):
