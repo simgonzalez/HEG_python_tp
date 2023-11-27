@@ -1,5 +1,58 @@
 import random
 
+
+def affichage_mot_cache(mot_cache: str, lettre_tiree: list, erreures_restantes: int):
+    """
+    La fonction affichage_mot_cache qui prends en paramètres le mot
+    caché, les lettres déjà tirées et le nombre d’erreurs restant
+    i. Cette fonction affichera le mot caché et les lettres déjà trouvées sous
+    la forme vu ci-dessus
+    ii. Elle affichera également le nombre d’erreurs restantes (voir exemple
+    de sortie)
+    @return:
+    """
+    print(f"                        ({erreures_restantes})")
+    for lettre in mot_cache:
+        if lettre in lettre_tiree:
+            print(lettre, end=" ")
+        else:
+            print("_", end=" ")
+
+
+def tirage_lettre(lettre_tiree: list) -> str:
+    """
+
+    @param lettre_tiree:
+    @return:
+    """
+    lettre: str = False
+    while not lettre:
+        lettre = input("Veuillez entrer une lettre : ")
+        if lettre in lettre_tiree:
+            print("Vous avez déjà tiré cette lettre")
+            lettre = False
+    return lettre_tiree.append(lettre)
+
+
+def verification_mot(mot: str, lettre_tiree: list) -> bool:
+    """
+    La fonction verification_mot qui prends en paramètres le mot caché et
+    les lettres déjà tirées. Cette fonction vérifiera si le mot est trouvé ou
+    non
+    @param mot: str -> mot à trouver
+    @param lettre_tiree: list -> liste des lettres tirées
+    @return: bool -> True si le mot est trouvé, False sinon
+    """
+    for lettre in mot:
+        if lettre not in lettre_tiree:
+            return False
+    return True
+
+
+def diminuer_erreurs(erreures_restantes: int) -> int:
+    return erreures_restantes - 1
+
+
 def tirer_mot()-> str:
     tab_mots = ['bleu', 'super', 'autre', 'bizarre', 'difficile', 'drole', 'etrange', 'facile', 'grave', 'impossible',
                 'jeune', 'juste', 'libre', 'malade', 'meme', 'pauvre', 'possible', 'propre', 'rouge', 'sale', 'simple',
