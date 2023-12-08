@@ -53,7 +53,7 @@ def diminuer_erreurs(erreures_restantes: int) -> int:
     return erreures_restantes - 1
 
 
-def tirer_mot()-> str:
+def tirer_mot() -> str:
     tab_mots = ['bleu', 'super', 'autre', 'bizarre', 'difficile', 'drole', 'etrange', 'facile', 'grave', 'impossible',
                 'jeune', 'juste', 'libre', 'malade', 'meme', 'pauvre', 'possible', 'propre', 'rouge', 'sale', 'simple',
                 'tranquille', 'triste', 'vide', 'bonne', 'toute', 'doux', 'FAUX', 'francais', 'gros', 'heureux',
@@ -115,4 +115,4 @@ def tirer_mot()-> str:
                 'suivre', 'taire', 'tendre', 'tenir', 'tenter', 'terminer', 'tirer', 'tomber', 'toucher', 'tourner',
                 'trainer', 'traiter', 'travailler', 'traverser', 'tromper', 'trouver', 'tuer', 'utiliser', 'valoir',
                 'vendre', 'venir', 'vivre', 'voir', 'voler', 'vouloir']
-    return tab_mots[random.randint(0,len(tab_mots))]
+    return tab_mots[random.randint(0, len(tab_mots))]
