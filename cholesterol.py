@@ -6,11 +6,10 @@ resultat_traitement_necessaire: str = ""
 
 while cholesterol_saisie.lower() != ACTION_FIN:
     cholesterol_saisie = input("Entrez votre taux de cholestérol : ")
-    if cholesterol_saisie == ACTION_FIN:
-        pass
-    elif 1 <= float(cholesterol_saisie) <= 7:
+
+    if 1 <= float(cholesterol_saisie) <= 7:
         total_valeur_cholesterol += cholesterol_saisie + ';'
-    else:
+    elif cholesterol_saisie != ACTION_FIN:
         print("Le taux de cholestérol doit être compris entre 1 et 7 mmol/L !")
 
 moyenne_taux_choleseterol = round(sum([float(val_chol)]for val_chol in total_valeur_cholesterol.split(
