@@ -33,7 +33,7 @@ def sum_row_matrix(matrix_to_sum_row: list[list[int]]) -> list[int]:
     """
     list_sum: list[int] = []
     sum_row: int = None
-    for idx, row in enumerate(matrix_to_sum_row):
+    for row in matrix_to_sum_row:
         sum_row = 0
         for val in row:
             sum_row += val
